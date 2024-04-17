@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Calculator</title>
+    <link rel="stylesheet" href="/love.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="cardhead">LOVE CALCULATOR</div>
+        <div class="cardbody">
+            <form class="calc" action="connect.php" method="post">
+                <div class="form-group">
+                    <input type="text" name="yourname" class="form-control" placeholder="Your Name" id="name">
+                </div>
+                <div> <span class="gap"> + </span></div>
+                <div class="form-group">
+                    <input type="text" name="lovename" class="form-control" placeholder="Love Name" id="lname">
+                </div>
+            </form>
+            <div class="butt">
+                <button onclick="myfun()"> click</button>
+            </div>
+            <div>
+                <input type="text" id="love">
+            </div>
+        </div>
+        <div class="cardfooter" id="relationshipMessage">God Bless Your RelationShip...</div>
+    </div>
+
+
+    <script>
+        function myfun() {
+            var name = document.getElementById('name').value;
+            var lname = document.getElementById('lname').value;
+            var firstchar = name.charCodeAt(0);
+
+            if (name == "") {
+                alert('Please Enter Name First');
+            } else if ((33 <= firstchar && firstchar <= 47) || (58 <= firstchar && firstchar <= 64) || (91 <= firstchar && firstchar <= 96) || (123 <= firstchar && firstchar <= 126)) {
+                alert('Please Enter Valid Name');
+            } else if (name.length <= 2) {
+                alert('Please Enter Valid Name');
+            } else if (!isNaN(name)) {
+                alert('Please Enter Valid Name');
+            } else if (lname == "") {
+                alert('Please Enter Love Name First');
+            } else if (lname.length <= 2) {
+                alert('Please Enter Valid Love Name');
+            } else if (!isNaN(lname)) {
+                alert('Please Enter Valid Love Name');
+            } else {
+                var randn = Math.random();
+                var numberInRang = randn * (100 - 60 + 1) + 60;
+                var findnum = Math.floor(numberInRang);
+                var message;
+                if (findnum > 90) {
+                    message = "Life Partner";
+                } else if (findnum >= 75) {
+                    message = "Healthy Relationship";
+                } else {
+                    message = "Good Relationship";
+                }
+                document.getElementById('love').value = findnum + "%";
+                document.getElementById('relationshipMessage').innerText = message;
+            }
+        }
+    </script>
+</body>
+
+</html>

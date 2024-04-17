@@ -1,0 +1,82 @@
+body{
+    background-image: url("/pngtree-valentine-wallpaper-a-cute-couple-sitting-in-a-red-blanket-with-picture-image_3178580.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+.container{
+    background-color: white;
+    text-align: center;
+    width: 80vh;
+    margin: auto;
+
+    
+}
+.cardhead{
+    background-color: red;
+    color: white;
+    /* height: 50px; */
+    text-align: center;
+    /* position: relative; */
+    padding: 20px;
+    /* justify-content:center; */
+    
+}
+.cardbody{
+    margin-top: 40px;
+}
+.calc{
+    
+    display: flex;
+    text-align: center;
+    margin-left: 16%;
+}
+
+.gap{
+    margin: 50px;
+}
+.form-control{
+    height: 30px;
+    width: 200px;
+    border-radius: 2px 2px 2px 2px;
+    border: 1px solid rgb(209, 191, 191);
+}
+input{
+    text-align: center;
+}
+.butt{
+    margin: auto;    
+}
+.butt button{
+    margin: 35px;
+    width: 40%;
+    height: 30px;
+    border-radius: 1px 1px 1px 1px ;
+    border: 1px solid black;
+    background-color: brown;
+    color: white;
+    cursor: pointer;
+
+}
+#love{
+    height: 20px;
+    border-radius: 2px 2px 2px 2px;
+    border: 1px solid rgb(209, 191, 191);
+}
+.cardfooter{
+    margin-top: 20px;
+    background-color: aliceblue;
+    color: rgb(143, 122, 122);
+    text-align: center;
+    padding: 17px;
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    border-radius: 2px 2px 2px 2px;
+    border: 1px solid white;
+}
